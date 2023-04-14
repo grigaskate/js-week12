@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/normalize.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="root">
+      <div>
+        <p class="title">Сервис комментариев со спам фильтром</p>
+      </div>
+      <div class="body">
+        <div>
+          <p class="subtitle">Оставьте ваш комментарий</p>
+          <form class="form">
+            <div>
+              <label for="name">Введите ваше ФИО:</label> <br />
+              <input type="text" name="name" />
+            </div>
+            <div>
+              <label for="avatar">Введите ссылку вашего аватара:</label> <br />
+              <input type="url" name="avatar" />
+            </div>
+            <div>
+              <label for="form__comment">Оставьте комментарий:</label><br />
+              <textarea class="form__comment" rows="10"></textarea>
+            </div>
+            <div>
+              <button class="form__btn">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div><p class="subtitle">Чат</p></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

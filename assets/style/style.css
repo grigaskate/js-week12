@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.root {
+  background-color: #101116;
+  font-family: "Roboto", sans-serif;
+  color: rgb(244, 240, 240);
+  font-size: 1em;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 20px;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.subtitle {
+  font-size: 1.25em;
+  color: #587099;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+input,
+textarea {
+  width: 90%;
+  background-color: #101116;
+  color: rgb(244, 240, 240);
+  border: 2px dashed #587099;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.form__btn {
+  background-color: #587099;
+  color: rgb(244, 240, 240);
+  border: none;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 20px;
+}
