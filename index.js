@@ -6,6 +6,7 @@ const avatar = document.querySelector(".avatar"); //переменная для 
 const comment = document.querySelector(".comment"); //переменная для поля "Оставьте комментарий"
 const message = document.querySelector(".message"); //переменная для чата Сообщение пользователя
 const button = document.querySelector(".form__btn"); //переменная для кнопки
+const line = document.querySelector(".line");
 
 // Назначим обработчик при клике на кнопку button
 button.addEventListener("click", (event) => {
@@ -14,12 +15,24 @@ button.addEventListener("click", (event) => {
   //Выводим ник пользователя
   const usernameValue = username.value.toLowerCase(); //получаем значения, введенные пользователем в поле "Введите ваше ФИО" и переводим их в нижний регистр
   const arr = usernameValue.split(" "); //разбиваем строку на массив
-  const arrNew = [];
+  const arrNew = []; //создаем новый массив, куда будет записываться результат цикла for
   for (let i = 0; i < arr.length; i++) {
     arrNew.push((arr[i] = arr[i][0].toUpperCase() + arr[i].substring(1)));
   }
   const usernameEnd = arrNew.join(" "); //создаём строку из элементов нового массива arrNew
   nickname.textContent = `${usernameEnd}`;
+
   //Выводим комментарий пользователя
-  message.textContent = `пока ${comment.value}`;
+  let commentValue = comment.value.toLowerCase();
+  if (commentValue.includes("viagra")) {
+    commentValue = commentValue.replace(/viagra/gi, "***");
+    message.innerHTML = `${commentValue}`;
+  }
+  if (commentValue.includes("xxx")) {
+    commentValue = commentValue.replace(/xxx/gi, "***");
+    message.innerHTML = `${commentValue}`;
+  } else message.innerHTML = `${commentValue}`;
+
+  //Выводим нижнее подчеркивание после комментария пользователя
+  line.innerHTML = `<div class=line__border></div>`;
 });

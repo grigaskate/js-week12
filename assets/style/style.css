@@ -19,6 +19,7 @@
 .subtitle {
   font-size: 1.25em;
   color: #587099;
+  font-weight: 800;
 }
 
 .body {
@@ -49,4 +50,17 @@ textarea {
   width: 100px;
   height: 100px;
   object-fit: cover;
+  margin-right: 20px;
+}
+
+.chat__user {
+  display: flex;
+  align-items: center;
+}
+.nickname {
+  color: #587099;
+  font-weight: 800;
+}
+.line__border {
+  border-bottom: 2px dashed #587099;
 }
