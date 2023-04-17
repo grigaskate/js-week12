@@ -44,3 +44,9 @@ textarea {
   padding: 5px 10px 5px 10px;
   margin-bottom: 20px;
 }
+
+.avatar__size {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
