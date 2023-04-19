@@ -56,11 +56,22 @@ textarea {
 .chat__user {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.nickname {
+
+.chat__userDate {
+  display: flex;
+  align-items: center;
+}
+.nickname,
+.dateNow {
   color: #587099;
   font-weight: 800;
 }
 .line__border {
   border-bottom: 2px dashed #587099;
+}
+
+.dateNow {
+  text-align: left;
 }

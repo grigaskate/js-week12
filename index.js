@@ -7,6 +7,37 @@ const comment = document.querySelector(".comment"); //переменная дл�
 const message = document.querySelector(".message"); //переменная для чата Сообщение пользователя
 const button = document.querySelector(".form__btn"); //переменная для кнопки
 const line = document.querySelector(".line");
+const dateNow = document.querySelector(".dateNow");
+
+//Функция вывода времени
+let getTime = () => {
+  const time = new Date();
+  const day = time.getDay();
+  let arrDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const dayName = arrDay[day];
+  const year = time.getFullYear();
+  const month = time.getMonth();
+  let arrMonth = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  monthName = arrMonth[month];
+  const date = time.getDate();
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+  dateNow.innerHTML = `${dayName}, ${year} ${monthName} ${date} at ${hours}:${minutes}:${seconds}`;
+};
 
 // Назначим обработчик при клике на кнопку button
 button.addEventListener("click", (event) => {
@@ -21,6 +52,9 @@ button.addEventListener("click", (event) => {
   }
   const usernameEnd = arrNew.join(" "); //создаём строку из элементов нового массива arrNew
   nickname.textContent = `${usernameEnd}`;
+
+  //Выводим текущее время
+  getTime();
 
   //Выводим комментарий пользователя
   let commentValue = comment.value.toLowerCase();
