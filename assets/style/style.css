@@ -27,8 +27,7 @@
   grid-template-columns: 1fr 1fr;
 }
 
-input,
-textarea {
+.input-style {
   width: 90%;
   background-color: #101116;
   color: rgb(244, 240, 240);
@@ -74,4 +73,12 @@ textarea {
 
 .dateNow {
   text-align: left;
+}
+
+.form__radio {
+  margin-bottom: 20px;
+}
+
+.form__radio1 {
+  margin-left: 20px;
 }

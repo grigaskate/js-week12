@@ -23,17 +23,44 @@
         <div>
           <p class="subtitle">Оставьте ваш комментарий</p>
           <form class="form">
+            <div class="form__radio">
+              <span>Показывать ваше имя?</span>
+              <label
+                ><input
+                  type="radio"
+                  name="radio"
+                  value="yes"
+                  class="form__radio1"
+                  id="yes"
+                />
+                <span>Yes</span>
+              </label>
+              <label
+                ><input
+                  type="radio"
+                  name="radio"
+                  value="no"
+                  class="form__radio1"
+                  id="no"
+                  checked
+                />
+                <span>No</span>
+              </label>
+            </div>
             <div>
               <label for="name">Введите ваше ФИО:</label> <br />
-              <input type="text" name="name" class="username" />
+              <input type="text" name="name" class="username input-style" />
             </div>
             <div>
               <label for="avatar">Введите ссылку вашего аватара:</label> <br />
-              <input type="url" name="avatar" class="linkPhoto" />
+              <input type="url" name="avatar" class="linkPhoto input-style" />
             </div>
             <div>
               <label for="form__comment">Оставьте комментарий:</label><br />
-              <textarea class="form__comment comment" rows="10"></textarea>
+              <textarea
+                class="form__comment comment input-style"
+                rows="10"
+              ></textarea>
             </div>
             <div>
               <button type="button" class="form__btn">Отправить</button>
