@@ -58,11 +58,7 @@ let checkComment = () => {
   const inputComment = comment.value;
   if (inputComment === "") {
     alert('Заполните поле "Комментарий"');
-    nickname.style.display = "None";
-    avatar.style.display = "None";
-    message.style.display = "None";
-    line.style.display = "None";
-    dateNow.style.display = "None";
+    return;
   } else {
     let commentValue = comment.value.toLowerCase();
     if (commentValue.includes("viagra")) {
