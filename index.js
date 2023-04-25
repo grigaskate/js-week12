@@ -30,39 +30,8 @@ showAvatar = () => {
   }
 };
 
-//Функция вывода времени
-let getTime = () => {
-  const time = new Date();
-  const day = time.getDay();
-  let arrDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const dayName = arrDay[day];
-  const year = time.getFullYear();
-  const month = time.getMonth();
-  let arrMonth = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  monthName = arrMonth[month];
-  const date = time.getDate();
-  const hours = time.getHours();
-  const minutes = time.getMinutes();
-  const seconds = time.getSeconds();
-  dateNow.innerHTML = `${dayName}, ${year} ${monthName} ${date} at ${hours}:${minutes}:${seconds}`;
-};
-
 //Функция срабатывания чекбокса и вывода имени
 let checkShowName = () => {
-  const ShowNameYes = document.getElementById("yes");
   const ShowNameNo = document.getElementById("no");
   if (ShowNameNo.checked) {
     nickname.textContent = `username`;
@@ -71,7 +40,7 @@ let checkShowName = () => {
   }
 };
 
-//Функция вывода стандартного аватара, если пользователь не ввел ссылку для отобржаения аватара
+//Функция вывода стандартного аватара, если пользователь не ввел ссылку для отображения аватара
 showRandomAvatar = () => {
   const arrAvatar = [
     "assets/image/avatar1.jpeg",
@@ -118,8 +87,11 @@ button.addEventListener("click", (event) => {
   showAvatar();
 
   //Выводим текущее время
-  getTime();
+  dateNow.innerHTML = new Date().toLocaleString();
 
   //Выводим нижнее подчеркивание после комментария пользователя
   line.innerHTML = `<div class=line__border></div>`;
+
+  //Очистка формы после отправки комментария
+  document.querySelector("form").reset();
 });
