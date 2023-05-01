@@ -45,28 +45,35 @@
   margin-bottom: 20px;
 }
 
-.avatar__size {
+.avatar__size,
+.comment__avatar {
   width: 100px;
   height: 100px;
   object-fit: cover;
   margin-right: 20px;
 }
 
-.chat__user {
+.chat__header,
+.comment__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.chat__userDate {
+.chat__info,
+.comment__info {
   display: flex;
   align-items: center;
 }
+
 .nickname,
-.dateNow {
+.dateNow,
+.comment__nickname,
+.comment__date {
   color: #587099;
   font-weight: 800;
 }
+
 .line__border {
   border-bottom: 2px dashed #587099;
 }
@@ -81,4 +88,8 @@
 
 .form__radio1 {
   margin-left: 20px;
+}
+
+.comment {
+  margin-top: 20px;
 }

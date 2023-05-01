@@ -59,6 +59,7 @@ let checkComment = () => {
   if (inputComment === "") {
     alert('Заполните поле "Комментарий"');
     return;
+    document.querySelector("form").reset();
   } else {
     let commentValue = comment.value.toLowerCase();
     if (commentValue.includes("viagra")) {
@@ -87,6 +88,27 @@ button.addEventListener("click", (event) => {
 
   //Выводим нижнее подчеркивание после комментария пользователя
   line.innerHTML = `<div class=line__border></div>`;
+
+  //Найти div, содержащий все комментарии
+  const commentsDiv = document.querySelector(".comments");
+
+  // Создать новый элемент для нового комментария
+  const newComment = document.createElement("div");
+  newComment.classList.add("comment");
+  newComment.innerHTML = `
+    <div class="comment__header">
+      <div class="comment__info">
+        <div class="comment__avatar">${avatar.innerHTML}</div>
+        <div class="comment__nickname">${nickname.textContent}</div>
+      </div>
+      <div class="comment__date">${dateNow.innerHTML}</div>
+    </div>
+    <p class=comment__message>${message.innerHTML}</p>
+    <div class=comment__line">${line.innerHTML}</div>
+    `;
+
+  // Добавить новый комментарий в div с классом comments
+  commentsDiv.appendChild(newComment);
 
   //Очистка формы после отправки комментария
   document.querySelector("form").reset();
